@@ -1,0 +1,11 @@
+language: generic
+sudo: true
+branch: master
+script: 
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_ACCESS_KEY_SECRET
+  bucket: assburgersconsulting.com
+  skip_cleanup: true
+  local_dir: ./
